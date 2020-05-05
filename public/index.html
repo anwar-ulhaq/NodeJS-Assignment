@@ -1,0 +1,107 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="modules/leaflet/dist/leaflet.css"/>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        .dropbtn {
+            background-color: #3498DB;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropbtn:hover, .dropbtn:focus {
+            background-color: #2980B9;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown a:hover {background-color: #ddd;}
+
+        .show {display: block;}
+    </style>
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<div class="formdiv">
+    <form method="post" enctype="multipart/form-data" id="mediaform">
+        <input type="text" name="category" placeholder="Category">
+        <br>
+        <input type="text" name="title" placeholder="Title">
+        <br>
+        <input type="text" name="details" placeholder="Details">
+        <br>
+        <label>Image, Audio or Video
+            <input type="file" name="mediafile" accept="audio/*,video/*,image/*">
+        </label>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<div>
+    <button id="getallmedia">Get Media</button>
+</div>
+
+<div>
+    <ul id="imagelist">
+
+    </ul>
+</div>
+
+
+<div class="modal hidden">
+    <button>&times;</button>
+    <h4>Map</h4>
+
+    <figure>
+        <img src="" alt="">
+        <div id="map" class="small-map"></div>
+    </figure>
+</div><!-- /.modal -->
+
+<script src="modules/moment/moment.js"></script>
+<script src="modules/leaflet/dist/leaflet.js"></script>
+<script src="js/main.js"></script>
+
+
+</body>
+</html>
